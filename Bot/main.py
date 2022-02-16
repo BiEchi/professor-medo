@@ -16,6 +16,7 @@ bot.
 """
 
 import logging
+import openai
 
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -44,15 +45,30 @@ def help_command(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Help!')
 
 
-def echo(update: Update, context: CallbackContext) -> None:
-    """Echo the user message."""
-    update.message.reply_text(update.message.text)
+def respond(update: Update, context: CallbackContext) -> None:
+    """Forward OpenAI messages."""
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=update.message.text,
+        temperature=0,
+        max_tokens=200,
+        top_p=1,
+        frequency_penalty=0.2,
+        presence_penalty=0,
+        stop=["\"\"\""]
+    )
+    # clean the response
+    caption: str = response.choices[0].text.strip()
+    update.message.reply_text(caption)
 
 
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    TOKEN = "5159503426:AAG7oheDGG6i5QWRqEQQ5Dr648o_DQU3thk"
+    f = open("./bot/telegram.key")
+    lines = f.read()
+    TOKEN = lines
+    f.close()
     updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
@@ -62,8 +78,13 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
 
+    f = open("./bot/openai.key")
+    lines = f.read()
+    openai.api_key = lines
+    f.close()
+
     # on non command i.e message - echo the message on Telegram
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
+    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, respond))
 
     # Start the Bot
     updater.start_polling()
