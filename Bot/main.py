@@ -48,14 +48,15 @@ def help_command(update: Update, context: CallbackContext) -> None:
 def respond(update: Update, context: CallbackContext) -> None:
     """Forward OpenAI messages."""
     response = openai.Completion.create(
-        engine="davinci",
-        prompt=update.message.text,
-        temperature=0,
+        engine="text-davinci-001",
+        prompt="Human:" + update.message.text + "\nAI:",
+        temperature=1,
         max_tokens=200,
         top_p=1,
-        frequency_penalty=0.2,
+        best_of=1,
+        frequency_penalty=0,
         presence_penalty=0,
-        stop=["\"\"\""]
+        stop=["Human: ", "AI: "]
     )
     # clean the response
     caption: str = response.choices[0].text.strip()
@@ -65,7 +66,7 @@ def respond(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    f = open("./bot/telegram.key")
+    f = open("./telegram.key")
     lines = f.read()
     TOKEN = lines
     f.close()
@@ -78,7 +79,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
 
-    f = open("./bot/openai.key")
+    f = open("./openai.key")
     lines = f.read()
     openai.api_key = lines
     f.close()

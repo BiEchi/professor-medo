@@ -10,6 +10,8 @@ conda create -n medo-chatbot-telegram
 conda activate medo-chatbot-telegram
 pip install python-telegram-bot --upgrade
 pip install openai
+cd Bot/
+python main.py
 ```
 
 Start your adventure!
