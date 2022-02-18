@@ -8,10 +8,11 @@ This is the public repo for Medo, a BERT-based chatbot framework for Telegram bo
 ```python
 conda create -n medo-chatbot-telegram
 conda activate medo-chatbot-telegram
-pip install python-telegram-bot --upgrade
-pip install openai
+pip3 install python-telegram-bot --upgrade
+pip3 install openai --upgrade
+pip3 install discord.py --upgrade
 cd Bot/
-python main.py
+python3 main.py
 ```
 
 Start your adventure!
