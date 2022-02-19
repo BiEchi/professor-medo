@@ -51,7 +51,7 @@ def respond(update: Update, context: CallbackContext) -> None:
         engine="text-davinci-001",
         prompt="Human:" + update.message.text + "\nAI:",
         temperature=1,
-        max_tokens=200,
+        max_tokens=1000,
         top_p=1,
         best_of=1,
         frequency_penalty=0,
