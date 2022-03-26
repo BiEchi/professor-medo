@@ -56,7 +56,7 @@ def respond(update: Update, context: CallbackContext) -> None:
         best_of=1,
         frequency_penalty=0,
         presence_penalty=0,
-        stop=["Human: ", "AI: "]
+        stop=["\n"]
     )
     # clean the response
     caption: str = response.choices[0].text.strip()
