@@ -1,6 +1,7 @@
 # key files
 *.key
 Bot/*.key
+wecom_listen/listen.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
