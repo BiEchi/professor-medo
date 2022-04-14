@@ -1,0 +1,8 @@
+discord
+telegram
+openai
+pycrypto
+uvicorn
+fastapi
+corpwechatbot
+slackbot
