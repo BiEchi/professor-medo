@@ -1,6 +1,6 @@
 # key files
 */*.key
-Bot/*.key
+Bot/*/*.key
 wecom_listen/listen.sh
 */*.sh
 
