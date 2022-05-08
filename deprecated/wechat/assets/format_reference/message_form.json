@@ -1,0 +1,168 @@
+message_form:
+{
+    'MsgId': '4801840540730531128', 
+    'FromUserName': '@@26160f97d0a6bcae5ff6870f16846ede24b569bd6e19485d4187bef457e41a65', 
+    'ToUserName': '@7314d33d66531ea9a8059e1e66550b0fc196cd820cc9c5f95481567c64952bbf', 
+    'MsgType': 1, 
+    'Content': '@Jack Gets RISC-V！\u2005yyy', 
+    'Status': 3, 
+    'ImgStatus': 1, 
+    'CreateTime': 1626250781, 
+    'VoiceLength': 0, 
+    'PlayLength': 0, 
+    'FileName': '', 
+    'FileSize': '', 
+    'MediaId': '', 
+    'Url': '', 
+    'AppMsgType': 0, 
+    'StatusNotifyCode': 0, 
+    'StatusNotifyUserName': '', 
+    'RecommendInfo': 
+    {
+        'UserName': '', 
+        'NickName': '', 
+        'QQNum': 0, 
+        'Province': '', 
+        'City': '', 
+        'Content': '', 
+        'Signature': '', 
+        'Alias': '', 
+        'Scene': 0, 
+        'VerifyFlag': 0, 
+        'AttrStatus': 0, 
+        'Sex': 0, 
+        'Ticket': '', 
+        'OpCode': 0
+    }, 
+    'ForwardFlag': 0, 
+    'AppInfo': 
+    {
+        'AppID': '', 
+        'Type': 0
+    }, 
+    'HasProductId': 0, 
+    'Ticket': '', 
+    'ImgHeight': 0, 
+    'ImgWidth': 0, 
+    'SubMsgType': 0, 
+    'NewMsgId': 4801840540730531128, 
+    'OriContent': '', 
+    'EncryFileName': '', 
+    'ActualNickName': '姚文滔', 
+    'IsAt': True, 
+    'ActualUserName': '@0054bc9b8d0e55fa3fa4e337ceca82df8750a2b37b0222d564ed668915a4c0e1', 
+    'User': 
+    <
+        Chatroom:
+        {
+            'MemberList': 
+            <
+                ContactList: 
+                [
+                    <
+                        ChatroomMember: 
+                        {
+                            'MemberList': <ContactList: []>, 
+                            'Uin': 0, 
+                            'UserName': '@53744892583844e9377acbaecf747f0bcb5f61063ac881d2071792e9e4a182b1', 
+                            'NickName': '钱立杨', 
+                            'AttrStatus': 102501, 
+                            'PYInitial': '', 
+                            'PYQuanPin': '', 
+                            'RemarkPYInitial': '', 
+                            'RemarkPYQuanPin': '', 
+                            'MemberStatus': 0, 
+                            'DisplayName': '钱立杨', 
+                            'KeyWord': ''
+                        }
+                    >, 
+                    <
+                        ChatroomMember: 
+                        {
+                            'MemberList': <ContactList: []>, 
+                            'Uin': 0, 
+                            'UserName': '@7314d33d66531ea9a8059e1e66550b0fc196cd820cc9c5f95481567c64952bbf', 
+                            'NickName': 'Jack Gets RISC-V！', 
+                            'AttrStatus': 102503, 
+                            'PYInitial': '', 
+                            'PYQuanPin': '', 
+                            'RemarkPYInitial': '', 
+                            'RemarkPYQuanPin': '', 
+                            'MemberStatus': 0, 
+                            'DisplayName': '', 
+                            'KeyWord': ''
+                        }
+                    >,
+                    <
+                        ChatroomMember:
+                        {
+                            'MemberList': <ContactList: []>,
+                            'Uin': 0,
+                            'UserName': '@0054bc9b8d0e55fa3fa4e337ceca82df8750a2b37b0222d564ed668915a4c0e1',
+                            'NickName': '姚文滔',
+                            'AttrStatus': 98341,
+                            'PYInitial': '',
+                            'PYQuanPin': '',
+                            'RemarkPYInitial': '',
+                            'RemarkPYQuanPin': '',
+                            'MemberStatus': 0,
+                            'DisplayName': '',
+                            'KeyWord': ''
+                        }
+                    >
+                ]
+            >,
+            'Uin': 0,
+            'UserName': '@@26160f97d0a6bcae5ff6870f16846ede24b569bd6e19485d4187bef457e41a65',
+            'NickName': 'Transformer暑研水群',
+            'HeadImgUrl': '/cgi-bin/mmwebwx-bin/webwxgetheadimg?seq=739897037&username=@@26160f97d0a6bcae5ff6870f16846ede24b569bd6e19485d4187bef457e41a65&skey=',
+            'ContactFlag': 2050,
+            'MemberCount': 3,
+            'RemarkName': '',
+            'HideInputBarFlag': 0,
+            'Sex': 0,
+            'Signature': '',
+            'VerifyFlag': 0,
+            'OwnerUin': 0,
+            'PYInitial': 'TRANSFORMERSYSQ',
+            'PYQuanPin': 'Transformershuyanshuiqun',
+            'RemarkPYInitial': '',
+            'RemarkPYQuanPin': '',
+            'StarFriend': 0,
+            'AppAccountFlag': 0,
+            'Statues': 0,
+            'AttrStatus': 0,
+            'Province': '',
+            'City': '',
+            'Alias': '',
+            'SnsFlag': 0,
+            'UniFriend': 0,
+            'DisplayName': '',
+            'ChatRoomId': 0,
+            'KeyWord': '',
+            'EncryChatRoomId': '@a892f59c1834c25ffd680ceefb3341be',
+            'IsOwner': 1,
+            'IsAdmin': None,
+            'Self':
+            <
+                ChatroomMember:
+                {
+                    'MemberList': <ContactList: []>,
+                    'Uin': 0,
+                    'UserName': '@7314d33d66531ea9a8059e1e66550b0fc196cd820cc9c5f95481567c64952bbf',
+                    'NickName': 'Jack Gets RISC-V！',
+                    'AttrStatus': 102503,
+                    'PYInitial': '',
+                    'PYQuanPin': '',
+                    'RemarkPYInitial': '',
+                    'RemarkPYQuanPin': '',
+                    'MemberStatus': 0,
+                    'DisplayName': '',
+                    'KeyWord': ''
+                }
+            >
+        }
+    >,
+    'Type': 'Text', 
+    'Text': '@Jack Gets RISC-V！\u2005yyy'
+}
