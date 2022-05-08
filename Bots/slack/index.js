@@ -1,16 +1,15 @@
 // Require the Node Slack SDK package (github.com/slackapi/node-slack-sdk)
 const { WebClient, LogLevel } = require("@slack/web-api");
-const { createEventAdapter } = require("@slack/events-api");
 const { Configuration, OpenAIApi } = require("openai");
 const fs = require('fs')
 var bodyParser = require('body-parser');
 const app = require('express')();
 
 // Configurations
-const token = fs.readFileSync("slack.key").toString();
+const token = fs.readFileSync("./slack/slack.key").toString();
 const PORT = 8000;
 const openai_configuration = new Configuration({
-  apiKey: fs.readFileSync("../openai.key").toString(),
+  apiKey: fs.readFileSync("./openai.key").toString(),
 });
 
 var jsonParser = bodyParser.json()
@@ -68,4 +67,5 @@ app.post('/', jsonParser, function (req, res) {
         break;
   }
 })
+
 
