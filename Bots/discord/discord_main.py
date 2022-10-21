@@ -14,9 +14,10 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
-        print('Message from {0.author}: {0.content}'.format(message))
+        if message.content.startswith('help'):
+            await message.channel.send('Start with "Medo, " to chat with me!')
  
-        if message.content[0] == '?':
+        if message.content.startswith('Medo, '):
             response = openai.Completion.create(
                 engine="text-davinci-001",
                 prompt="Human:" + message.content[1:] + "\nAI:",
@@ -32,7 +33,7 @@ class MyClient(discord.Client):
             caption: str = response.choices[0].text.strip()
             await message.channel.send(caption)
 
-client = MyClient(intents=discord.Intents.all())
+client = MyClient(intents=discord.Intents.default())
 f = open("discord/discord.key")
 lines = f.read()
 TOKEN = lines
