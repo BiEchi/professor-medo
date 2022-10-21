@@ -13,6 +13,8 @@ class MyClient(discord.Client):
         # don't respond to ourselves
         if message.author == self.user:
             return
+
+        print('Message from {0.author}: {0.content}'.format(message))
  
         if message.content[0] == '?':
             response = openai.Completion.create(
