@@ -8,7 +8,7 @@ class MyClient(discord.Client):
         lines = f.read()
         openai.api_key = lines
         f.close()
- 
+
     async def on_message(self, message):
         # don't respond to ourselves
         if message.author == self.user:
