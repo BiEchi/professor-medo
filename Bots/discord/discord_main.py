@@ -6,6 +6,7 @@ class MyClient(discord.Client):
         print('Logged on as', self.user)
         f = open("openai.key")
         lines = f.read()
+        openai.organization = "org-Xrmm6MxA9FkSXTcN88YHLyZ1"
         openai.api_key = lines
         f.close()
 
