@@ -32,7 +32,7 @@ class MyClient(discord.Client):
             caption: str = response.choices[0].text.strip()
             await message.channel.send(caption)
 
-client = MyClient(intents=discord.Intents.default())
+client = MyClient(intents=discord.Intents.all())
 f = open("discord/discord.key")
 lines = f.read()
 TOKEN = lines
