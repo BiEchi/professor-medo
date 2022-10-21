@@ -18,14 +18,13 @@ class MyClient(discord.Client):
             await message.channel.send('Start with "Medo, " to chat with me!')
 
         print('Message from {0.author}: {0.content}'.format(message))
-        print(message.content[5:])
  
         if message.content.startswith('Medo, '):
             response = openai.Completion.create(
-                engine="text-davinci-001",
-                prompt="Human:" + message.content[5:] + "\nAI:",
-                temperature=1,
-                max_tokens=200,
+                engine="text-davinci-002",
+                prompt="Human:" + message.content[6:] + "\nAI:",
+                temperature=0.5,
+                max_tokens=256,
                 top_p=1,
                 best_of=1,
                 frequency_penalty=0,
