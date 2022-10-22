@@ -9,8 +9,6 @@ class MyClient(discord.Client):
         # remember to strip the newline character
         openai.api_key = lines.strip()
         f.close()
-        # disable the ssl certificate verification
-        openai.verify_ssl_certs = False
 
     async def on_message(self, message):
         # don't respond to ourselves
