@@ -20,7 +20,6 @@ class MyClient(discord.Client):
  
 
         if message.content.startswith('Medo, '):
-            await message.channel.send(message.content[6:])
             response = openai.Completion.create(
                 engine="text-davinci-002",
                 prompt="Human:" + message.content[6:] + "\nAI:",
