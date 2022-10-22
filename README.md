@@ -21,8 +21,8 @@ pip3 install python-telegram-bot --upgrade
 python3 -m pip install --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --user pandas
 python3 -m pip install --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --user openai
 python3 -m pip install --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --user discord.py
-cd Bots/discord
-python3 main.py
+cd professor-medo/Bots/
+python3 discord/discord_main.py
 ```
 
 Start your adventure!

@@ -6,7 +6,8 @@ class MyClient(discord.Client):
         print('Logged on as', self.user)
         f = open("openai.key")
         lines = f.read()
-        openai.api_key = lines
+        # remember to strip the newline character
+        openai.api_key = lines.strip()
         f.close()
         # disable the ssl certificate verification
         openai.verify_ssl_certs = False
